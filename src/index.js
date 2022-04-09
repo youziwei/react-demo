@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TodoList from './demo/TodoList';
+// 不分组件
+// import TodoList from './demo/TodoList';
+// 分组件
+import TodoList from './demo/TodoListComponent/TodoListApp'
 
 ReactDOM.render(
   <React.StrictMode>
