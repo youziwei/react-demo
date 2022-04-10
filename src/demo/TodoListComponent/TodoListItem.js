@@ -10,7 +10,6 @@ class TodoListItem extends Component {
     const { content } = this.props
     return (
       <Fragment>
-        {this.props.test}
         <li onClick={this.handleChildItem}>{content}</li>
       </Fragment>
     )

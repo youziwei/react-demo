@@ -32,13 +32,17 @@ class TodoList extends Component {
     )
   }
   componentDidMount(){
-    axios.get('./api/todolist')
-    .then(()=>{
-      console.log('获取到了')
+    axios.get('http://localhost.charlesproxy.com:3000/todolist')
+    .then((res)=>{
+      this.setState(()=>({
+        list: [...res.data]
+      }))
     }).catch((error)=>{
       console.log(error)
     })
   }
+ 
+ 
   getTodoItem(){
     return this.state.list.map((item,index)=>{
         return <TodoListItem
